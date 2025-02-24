@@ -1,35 +1,5 @@
 # cap5771sp25-project
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Movie Data Analysis README</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1, h2, h3 {
-      color: #00509e;
-    }
-    pre {
-      background-color: #eaeaea;
-      padding: 10px;
-      border-radius: 5px;
-      overflow-x: auto;
-    }
-    code {
-      font-family: Consolas, monospace;
-    }
-    a {
-      color: #00509e;
-    }
-  </style>
-</head>
-<body>
+
   <h1>Movie Data Analysis Project</h1>
   <p>
     This project is designed to merge, clean, and analyze multiple movie datasets to create a comprehensive data source for further analysis, research, and machine learning applications.
