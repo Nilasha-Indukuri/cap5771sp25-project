@@ -85,15 +85,7 @@ weighted avg       0.92      0.91      0.91      1000
     <li>AUC Score: 0.94</li>
   </ul>
 
-  <h2>📂 Repository Structure</h2>
-  <pre>
-├── milestone_2.ipynb               # Full feature engineering and modeling notebook
-├── merged_data.csv                 # Cleaned dataset from Milestone 1
-├── models/                         # Pickled trained models
-├── visuals/                        # Graphs and plots (optional)
-├── README.html                     # This file
-├── IDS_Milestone2_report.pdf       # Final milestone report
-  </pre>
+
 
   <h2>🔮 Next Steps – Milestone 3</h2>
   <ul>
