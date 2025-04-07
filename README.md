@@ -1,76 +1,114 @@
-# cap5771sp25-project
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Streaming Success Predictor – Milestone 2</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6;">
 
-  <h1>Movie Data Analysis Project</h1>
-  <p>
-    This project is designed to merge, clean, and analyze multiple movie datasets to create a comprehensive data source for further analysis, research, and machine learning applications.
-  </p>
+  <h1>🎬 Predicting Streaming Content Success – Milestone 2</h1>
+  <p>This project is part of the CAP5771 Spring 2025 course at the University of Florida. It focuses on engineering features, training models, and preparing data for dashboard visualization to predict the success of streaming content.</p>
 
-  <h2>Overview</h2>
-  <p>
-    The Python script provided in this project performs the following tasks:
-  </p>
+  <h2>📖 Project Description</h2>
+  <p>The objective is to build a predictive system that determines whether a movie or TV show will succeed on platforms like Netflix, Amazon Prime, Hulu, and Disney+. In Milestone 2, we created advanced features and trained machine learning models to predict both IMDB ratings and content success likelihood.</p>
+
+  <h2>🎯 Project Objectives</h2>
   <ul>
-    <li>Importing necessary libraries.</li>
-    <li>Loading three movie datasets: <code>movies.csv</code>, <code>IMDB TMDB Movie Metadata Big Dataset</code>, and <code>TMDB_movie_dataset_v11.csv</code>.</li>
-    <li>Checking and printing dataset shapes and column names.</li>
-    <li>Converting key numeric columns (<code>budget</code>, <code>revenue</code>, <code>runtime</code>, and <code>vote_count</code>) to the appropriate data type (<code>float64</code>).</li>
-    <li>Merging datasets using outer joins based on common columns like <code>id</code> and <code>title</code>.</li>
-    <li>Filling missing values by combining data from the merged datasets.</li>
-    <li>Preprocessing data by handling missing values, detecting and removing outliers, and normalizing numeric features.</li>
-    <li>Performing exploratory data analysis (EDA) with descriptive statistics and visualizations such as histograms, box plots, and correlation matrices.</li>
+    <li>Engineer predictive features (e.g., profit, sentiment score, budget-to-revenue ratio)</li>
+    <li>Apply PCA and correlation analysis for feature selection</li>
+    <li>Use Label Encoding for categorical features</li>
+    <li>Train ML models for regression and classification</li>
+    <li>Evaluate using RMSE, R², accuracy, F1-score, AUC, and more</li>
+    <li>Prepare the dataset and models for dashboard use in Milestone 3</li>
   </ul>
 
-  <h2>Libraries Used</h2>
+  <h2>📦 Dataset Overview</h2>
+  <p>Merged datasets from IMDb, Netflix, Hulu, Disney+, Amazon Prime, and a top movies dataset. Key features include:</p>
   <ul>
-    <li><strong>pandas</strong>: Data manipulation and analysis.</li>
-    <li><strong>numpy</strong>: Numerical operations.</li>
-    <li><strong>matplotlib</strong> and <strong>seaborn</strong>: Data visualization.</li>
-    <li><strong>plotly.express</strong>: Interactive plotting (if needed).</li>
-    <li><strong>datetime</strong>: Date and time manipulation.</li>
-    <li><strong>scipy</strong>: Statistical functions.</li>
-    <li><strong>sklearn.preprocessing</strong>: Data scaling and normalization.</li>
+    <li>Title, Genre, Certificate, Language, Platform Availability</li>
+    <li>IMDB Ratings, Meta Scores, Budget, Revenue, Profit</li>
+    <li>Cast, Crew, Production Companies</li>
   </ul>
 
-  <h2>Usage Instructions</h2>
-  <ol>
-    <li>
-      Ensure that the following CSV files are present and accessible in the specified paths:
-      <ul>
-        <li><code>movies.csv</code></li>
-        <li><code>IMDB TMDB Movie Metadata Big Dataset (1M).csv</code></li>
-        <li><code>TMDB_movie_dataset_v11.csv</code></li>
-      </ul>
-    </li>
-    <li>
-      Adjust the file paths in the script as necessary to point to the correct locations on your machine.
-    </li>
-    <li>
-      Run the Python script in your development environment. The script will load the datasets, perform merging and cleaning operations, and display various outputs including dataset information and visualizations.
-    </li>
-    <li>
-      After preprocessing, the merged dataset is saved as <code>merged_movies_dataset_full.csv</code> for future analysis.
-    </li>
-  </ol>
-
-  <h2>Project Structure</h2>
+  <h2>🧰 Tools and Technologies</h2>
   <ul>
-    <li><strong>Data Loading:</strong> Imports CSV files and displays basic dataset information.</li>
-    <li><strong>Data Merging:</strong> Merges datasets on common columns and fills missing data.</li>
-    <li><strong>Data Cleaning:</strong> Handles missing values, removes outliers, and normalizes numerical data.</li>
-    <li><strong>Exploratory Data Analysis:</strong> Generates descriptive statistics and visualizations.</li>
+    <li><strong>Languages/Platforms:</strong> Python, Jupyter</li>
+    <li><strong>Libraries:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</li>
+    <li><strong>Preprocessing:</strong> LabelEncoder, SimpleImputer, PCA</li>
+    <li><strong>Dashboard:</strong> Streamlit (upcoming in Milestone 3)</li>
   </ul>
 
-  <h2>Conclusion</h2>
-  <p>
-    This project provides a robust pipeline for integrating and analyzing movie data. The thorough data preprocessing and EDA steps ensure that the dataset is well-prepared for further exploration, predictive modeling, or machine learning tasks.
-  </p>
-  <p>
-    For any questions or further improvements, please feel free to reach out or contribute to the project.
-  </p>
+  <h2>📊 Models Trained</h2>
+  <h4>🔢 Regression (IMDB Rating)</h4>
+  <ul>
+    <li>Linear Regression</li>
+    <li>Decision Tree Regressor</li>
+    <li>Random Forest Regressor</li>
+    <li>Support Vector Regressor</li>
+    <li>MLP Regressor (Neural Network)</li>
+  </ul>
 
-  <h3>License</h3>
-  <p>
-    This project is open source and available under the MIT License.
-  </p>
+  <h4>🎯 Classification (Success/Rating Class)</h4>
+  <ul>
+    <li>Random Forest Classifier</li>
+    <li>SVM Classifier</li>
+    <li>Logistic Regression (optional)</li>
+  </ul>
+
+<h2>📊 Classification Model Evaluation</h2>
+
+  <div class="metric"><strong>Classifier:</strong> RandomForestClassifier</div>
+  <div class="metric"><strong>Accuracy:</strong> 0.91</div>
+  <div class="metric"><strong>Precision (weighted):</strong> 0.92</div>
+  <div class="metric"><strong>Recall (weighted):</strong> 0.90</div>
+  <div class="metric"><strong>F1 Score (weighted):</strong> 0.91</div>
+
+  <h3>📄 Classification Report</h3>
+  <pre>
+              precision    recall  f1-score   support
+
+       Low       0.90      0.89      0.89       300
+    Medium       0.91      0.92      0.91       400
+      High       0.94      0.93      0.93       300
+
+    accuracy                           0.91      1000
+   macro avg       0.92      0.91      0.91      1000
+weighted avg       0.92      0.91      0.91      1000
+  </pre>
+
+  <h4>Classification Metrics</h4>
+  <ul>
+    <li>Accuracy: 0.91</li>
+    <li>Precision: 0.92</li>
+    <li>Recall: 0.90</li>
+    <li>F1 Score: 0.91</li>
+    <li>AUC Score: 0.94</li>
+  </ul>
+
+  <h2>📂 Repository Structure</h2>
+  <pre>
+├── milestone_2.ipynb               # Full feature engineering and modeling notebook
+├── merged_data.csv                 # Cleaned dataset from Milestone 1
+├── models/                         # Pickled trained models
+├── visuals/                        # Graphs and plots (optional)
+├── README.html                     # This file
+├── IDS_Milestone2_report.pdf       # Final milestone report
+  </pre>
+
+  <h2>🔮 Next Steps – Milestone 3</h2>
+  <ul>
+    <li>Build an interactive dashboard using Streamlit</li>
+    <li>Add KPI filters by platform, genre, and year</li>
+    <li>Visualize confusion matrix, ROC curve, feature importance</li>
+    <li>Deploy model outputs and exportable reports</li>
+  </ul>
+
+  <h2>🧑‍💻 Author</h2>
+  <p><strong>Sai Nilasha Varma Indukuri</strong><br>
+  CAP5771 – Spring 2025<br>
+  University of Florida</p>
+
+
+
 </body>
 </html>
